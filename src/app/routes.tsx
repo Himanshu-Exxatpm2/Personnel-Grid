@@ -138,7 +138,7 @@ export const router = createBrowserRouter([
       { path: '*', element: <Navigate to="/login" replace /> },
     ],
   },
-]);
+], { basename: (import.meta.env.BASE_URL || "/").replace(/\/$/, "") || "/" });
 
 /** Adapt existing JobsPage (path/nav props) into the site shell outlet */
 function JobsPageAdapter() {
